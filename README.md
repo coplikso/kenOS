@@ -1,19 +1,31 @@
-# kenOS
-# kenOS 🖥️
+# 👋 kenOS
 
-> Personal desktop-style web portfolio by **Kenji** — Hack Clubber from Indonesia 🇮🇩
+A macOS-inspired personal desktop experience built with HTML, CSS, and JavaScript — by **kenji**, a hack clubber from Indonesia 🇮🇩
 
 ---
 
 ## ✨ Features
 
-- **kenOS Window** — intro card with profile pic, bio, and embedded Spotify track
-- **Weather App** — live weather via geolocation (fallback: Bekasi, Indonesia)
-- **Sosmed Window** — profile card with Instagram link
-- **macOS-style Dock** — animated dock with hover bounce & open/close indicator dots
-- **Draggable Windows** — all windows can be freely moved around
-- **Real-time Clock** — topbar shows live date & time (locale: id-ID)
-- **Glassmorphism UI** — frosted glass aesthetic with backdrop blur
+- 🖥️ **macOS-style Dock** with hover animations and open-app indicators
+- 🌤️ **Weather App** — shows real-time weather based on your location (fallback: Bekasi, Indonesia)
+- 📝 **Notes App** — write and auto-save notes with localStorage
+- 👤 **Social / About Me** — links to kenji's Instagram (`@coplikso`)
+- 🎵 **Spotify Embed** — kenji's favorite song
+- 🕐 **Live Clock & Date** in the top bar (Indonesian locale)
+- 🪟 **Draggable Windows** — all app windows can be moved around freely
+
+---
+
+## 🚀 Getting Started
+
+Just open `index.html` in your browser — no build tools or dependencies needed.
+
+```bash
+# Clone or download the project, then:
+open index.html
+```
+
+> ⚠️ The weather app uses `navigator.geolocation`. Allow location access for accurate weather, or it'll default to Bekasi, Indonesia.
 
 ---
 
@@ -21,53 +33,42 @@
 
 ```
 kenOS/
-├── index.html      # App structure — windows, dock, topbar
-├── style.css       # All styles — glassmorphism, dock, weather, about me
-├── script.js       # Logic — clock, drag, window toggles, weather fetch
-├── pap.png         # Profile picture (used in kenOS & About Me windows)
-├── paopop.jpeg     # Dock icon for "my sosmed"
-├── ios.png         # Dock icon for Weather app
-└── pop.avif        # Background wallpaper
+├── index.html      # Main HTML structure
+├── style.css       # All styles (glassmorphism, dock, windows)
+├── script.js       # App logic (weather, notes, dragging, clock)
+├── pop.avif        # Desktop wallpaper
+├── pap.png         # Profile picture (kenOS icon)
+├── paopop.jpeg     # Profile picture (Social icon)
+├── ios.png         # Weather app icon
+└── notes.png       # Notes app icon
 ```
 
 ---
 
-## 🚀 How to Run
+## 🌐 APIs Used
 
-No build step needed. Just open `index.html` in any modern browser.
-
-```bash
-# Serve locally (optional)
-npx serve .
-# or
-python -m http.server
-```
-
-> ⚠️ The weather app uses the browser Geolocation API. Allow location access when prompted, or it defaults to Bekasi, Indonesia.
+- [Open-Meteo](https://open-meteo.com/) — free weather data (no API key needed)
+- [Nominatim (OpenStreetMap)](https://nominatim.openstreetmap.org/) — reverse geocoding for city name
 
 ---
 
-## 🌦️ APIs Used
+## 🛠️ Built With
 
-| API | Purpose |
-|-----|---------|
-| [Open-Meteo](https://open-meteo.com/) | Weather data — free, no key needed |
-| [Nominatim / OSM](https://nominatim.org/) | Reverse geocoding for city name |
-| [Spotify Embed](https://open.spotify.com/) | Favorite song player |
+- Vanilla HTML, CSS & JavaScript — no frameworks
+- Glassmorphism UI design
+- `localStorage` for persistent notes
+- CSS `backdrop-filter` for frosted glass effects
 
 ---
 
-## 🎨 Design Notes
+## 📸 Wallpaper Credit
 
-- **Font:** `-apple-system, BlinkMacSystemFont` (native system UI font)
-- **Style:** Glassmorphism — semi-transparent panels + `backdrop-filter: blur`
-- **Background:** `pop.avif` ([Unsplash source](https://unsplash.com/photos/a-view-of-the-ocean-from-the-top-of-a-mountain-2fWZ9jsoIe0))
-- **Accent colors:** Warm peach tones (`#FFB399`, `#FFD6A6`, `#FFF0BE`) in topbar
+Background photo from Unsplash:  
+[https://unsplash.com/photos/a-view-of-the-ocean-from-the-top-of-a-mountain-2fWZ9jsoIe0](https://unsplash.com/photos/a-view-of-the-ocean-from-the-top-of-a-mountain-2fWZ9jsoIe0)
 
 ---
 
 ## 👤 Author
 
-**Kenji** — CSS enjoyer, JavaScript reluctant user
-
-- 📸 Instagram: [@coplikso](https://www.instagram.com/coplikso/)
+**kenji** — hack clubber from Indonesia  
+Instagram: [@coplikso](https://www.instagram.com/coplikso/)
