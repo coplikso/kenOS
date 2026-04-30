@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>kenOS</title>
+</head>
+<body>
+    <div class="container-wrapper">
+        <div id="container">
+            <button class="close-btn" onclick="toggleContainer()">✕</button>
+            <img src="pap.png" alt="img pfp" class="pfp">
+            <h1 class="h1-1">ken OS</h1>
+            <p class="intro">hi there! my name name is kenji, i love css and not javascript, im a hack clubber from indonesia, and this is my fav song</p>
+            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/2x3vwXWuecPrRqgEUuSUJA?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+    </div>
+
+    <!-- Weather App Window -->
+    <div class="container-wrapper" id="weather-wrapper" style="display:none; top: 40%; left: 55%;">
+        <div id="weather-container">
+            <button class="close-btn" onclick="toggleWeather()">✕</button>
+            <div class="weather-inner">
+                <div class="weather-header">
+                    <div class="weather-city" id="weather-city">Locating...</div>
+                    <div class="weather-time" id="weather-time"></div>
+                </div>
+                <div class="weather-main">
+                    <div class="weather-emoji" id="weather-emoji">⏳</div>
+                    <div class="weather-temp" id="weather-temp">--°</div>
+                </div>
+                <div class="weather-desc" id="weather-desc">Fetching weather...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Me Window -->
+    <div class="container-wrapper" id="aboutme-wrapper" style="display:none; top: 45%; left: 60%;">
+        <div id="aboutme-container">
+            <button class="close-btn" onclick="toggleAboutMe()">✕</button>
+            <div class="aboutme-inner">
+                <img src="pap.png" alt="kenji" class="aboutme-pfp">
+                <h2 class="aboutme-name">kenji</h2>
+                <p class="aboutme-sub">hack clubber from indonesia 🇮🇩</p>
+                <div class="aboutme-socials">
+                    <a href="https://www.instagram.com/coplikso/" target="_blank" class="social-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        @coplikso
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notes Window -->
+    <div class="container-wrapper" id="notes-wrapper" style="display:none; top: 42%; left: 45%;">
+        <div id="notes-container">
+            <button class="close-btn" onclick="toggleNotes()">✕</button>
+            <div class="notes-inner">
+                <div class="notes-header">
+                    <span class="notes-title">📝 notes</span>
+                    <button class="notes-clear-btn" onclick="clearNotes()" title="Clear notes">🗑️</button>
+                </div>
+                <textarea id="notes-textarea" placeholder="tulis apa aja..."></textarea>
+            </div>
+        </div>
+    </div>
+
+    <p class="copyright">https://unsplash.com/photos/a-view-of-the-ocean-from-the-top-of-a-mountain-2fWZ9jsoIe0</p>
+    <div class="topbar">
+        <p class="left-top">kenOS</p>
+        <p class="middle-top">hello welcome to kenOS, try pressing one of the app below</p>
+        <p class="right-top" id="date">--/--/---- --:--</p>
+    </div>
+
+    <!-- macOS-style Dock -->
+    <div class="dock">
+        <div class="dock-item" title="kenOS" onclick="toggleContainer()">
+            <img src="pap.png" alt="kenOS" class="dock-icon">
+            <span class="dock-label">kenOS</span>
+            <div class="dock-dot" id="kenos-dot"></div>
+        </div>
+        <div class="dock-item" title="About Me" onclick="toggleAboutMe()">
+            <img src="paopop.jpeg" alt="About Me" class="dock-icon" style="border-radius:50%;">
+            <span class="dock-label">social</span>
+            <div class="dock-dot" id="aboutme-dot"></div>
+        </div>
+        <div class="dock-item" title="Weather" onclick="toggleWeather()">
+            <img src="ios.png" alt="Weather" class="dock-icon">
+            <span class="dock-label">Weather</span>
+            <div class="dock-dot" id="weather-dot"></div>
+        </div>
+        <div class="dock-item" title="Notes" onclick="toggleNotes()">
+            <img src="notes.png" alt="Notes" class="dock-icon">
+            <span class="dock-label">Notes</span>
+            <div class="dock-dot" id="notes-dot"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
