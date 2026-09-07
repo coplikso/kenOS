@@ -18,12 +18,7 @@ A macOS-inspired personal desktop experience built with HTML, CSS, and JavaScrip
 
 ## 🚀 Getting Started
 
-Just open `index.html` in your browser — no build tools or dependencies needed.
-
-```bash
-# Clone or download the project, then:
-open index.html
-```
+Just open `https://coplikso.github.io/kenOS/` in your browser — no build tools or dependencies needed.
 
 > ⚠️ The weather app uses `navigator.geolocation`. Allow location access for accurate weather, or it'll default to Bekasi, Indonesia.
 
